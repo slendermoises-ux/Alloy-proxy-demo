@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alloy Proxy Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      width: 60%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    p {
+      color: #555;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Alloy Proxy Demo</h1>
+  <p>This is an educational web project to learn how websites work. It does not bypass filters.</p>
+
+  <input type="text" id="url" placeholder="Enter a URL (example.com)">
+  <button onclick="visitURL()">Go</button>
+
+  <script>
+    function visitURL() {
+      const input = document.getElementById('url').value.trim();
+      if(!input) {
+        alert('Please enter a URL.');
+        return;
+      }
+      // Demo mode: just show the URL entered
+      alert('Demo: You entered ' + input + '\nIn a real project, this would fetch content safely.');
+    }
+  </script>
+
+</body>
+</html>
